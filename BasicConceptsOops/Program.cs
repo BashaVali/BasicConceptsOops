@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BasicConceptsOops;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,8 @@ namespace BasicConceptsOops
                 Console.WriteLine(" Select the option ");
 
                 Console.WriteLine("1.Method Overloading" + "\n" +
-                                  "2.Exit" + "\n");
+                                  "2.Method Overrinding" + "\n" +
+                                  "3.Exit" + "\n");
                 int check = Convert.ToInt32(Console.ReadLine());
                 MethodOverLoading method = new MethodOverLoading();
                 switch (check)
@@ -32,7 +34,15 @@ namespace BasicConceptsOops
                         Console.WriteLine("sum of the three "
                                           + "double value : " + doubleSum);
                         break;
-                      case 2:
+                    case 2:
+                        Animal myAnimal = new Animal();  // Create a Animal object
+                        Animal myCat = new Cat();  // Create a Cat object
+                        Animal myDog = new Dog();  // Create a Dog object
+                        myAnimal.animalSound();
+                        myCat.animalSound();
+                        myDog.animalSound();
+                        break;
+                    case 3:
                         flag = false;
                         break;
                 }
@@ -40,4 +50,3 @@ namespace BasicConceptsOops
         }
     }
 }
-
