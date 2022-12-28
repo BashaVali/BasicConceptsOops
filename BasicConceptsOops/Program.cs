@@ -1,4 +1,4 @@
-﻿using BasicConceptsOops;
+﻿using BasicConceptsOops.Inheriatance;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +21,8 @@ namespace BasicConceptsOops
 
                 Console.WriteLine("1.Method Overloading" + "\n" +
                                   "2.Method Overrinding" + "\n" +
-                                  "3.Exit" + "\n");
+                                  "3.Inheritance"+ "\n" +
+                                  "4.Exit" + "\n");
                 int check = Convert.ToInt32(Console.ReadLine());
                 MethodOverLoading method = new MethodOverLoading();
                 switch (check)
@@ -43,6 +44,16 @@ namespace BasicConceptsOops
                         myDog.animalSound();
                         break;
                     case 3:
+                        // Create a myCar object
+                        Car myCar = new Car();
+
+                        // Call the honk() method (From the Vehicle class) on the myCar object
+                        myCar.honk();
+
+                        // Display the value of the brand field (from the Vehicle class) and the value of the modelName from the Car class
+                        Console.WriteLine(myCar.brand + " " + myCar.modelName);
+                        break;
+                    case 4:
                         flag = false;
                         break;
                 }
